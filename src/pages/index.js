@@ -4,7 +4,7 @@ import DarkModeToggle from '@/components/DarkModeToggle';
 import getAllFonts from '@/helper/getAllFonts';
 import { useEffect, useState } from "react";
 
-const Home = ({fonts, ...props}) => {
+const Home = ({fonts}) => {
 	
 	const [selectedFont, setSelectedFont] = useState(fonts.unicodes[0]);
 	const [isBold, setIsBold] = useState(false);
@@ -206,8 +206,9 @@ const Home = ({fonts, ...props}) => {
 							)}
 						</div>
 
+						{/* Warning */}
 						{ !selectedFont.unicode && (
-							<div className="flex justify-center mt-3">
+							<div className="flex justify-center mt-3 mx-3">
 								<span className="text-xs text-yellow-500">
 									Warning! Rewrite with English Keyboard to see changes for non-unicode fonts
 								</span>
@@ -230,10 +231,13 @@ const Home = ({fonts, ...props}) => {
 				</div>
 
 				<div className="flex items-center justify-end border-t border-t-gray-200 dark:border-t-zinc-800 h-8">
-					<div className="flex flex-row items-center space-x-2 mr-4">
+					<a 
+						href="https://thenextmove.net"
+						className="flex flex-row items-center space-x-2 mr-4"
+					>
 						<span className="text-2xs italic text-gray-400">Brought To You By</span>
 						<NextMoveLogo theme={ isDarkMode ? 'light' : 'dark' }/>
-					</div>
+					</a>
 				</div>
 
 			</div>
