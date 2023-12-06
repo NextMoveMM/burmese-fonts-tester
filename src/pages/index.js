@@ -29,9 +29,9 @@ const Home = ({fonts}) => {
 				<div className="flex flex-row justify-between items-center h-12 border-b border-b-gray-200 dark:border-b-gray-800">
 					<div className="sm:flex-1"></div>
 					<div className="flex-1 flex sm:justify-center">
-						<span className="font-serif ml-5 font-bold italic text-lg dark:text-white">
+						<h1 className="font-serif ml-5 font-bold italic text-lg dark:text-white">
 							Burmese Fonts Tester
-						</span>
+						</h1>
 					</div>
 					<div className="flex sm:flex-1 justify-center">
 						<div className="mr-5">
