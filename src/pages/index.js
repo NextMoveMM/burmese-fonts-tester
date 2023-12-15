@@ -31,7 +31,7 @@ const Home = ({fonts}) => {
 	}, [isDarkMode]); 
 	  
     return (
-		<div className={`flex flex-col h-screen w-screen ${isDarkMode ? 'dark' : ''}`}>
+		<div className={`fixed flex flex-col h-screen w-screen ${isDarkMode ? 'dark' : ''}`}>
 			<div className="flex flex-col flex-1 dark:bg-zinc-700 overflow-hidden">
 
 				{/* header */}
