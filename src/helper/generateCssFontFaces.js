@@ -4,7 +4,7 @@ export default (fontFiles) => {
         return `
             @font-face {
                 font-family: '${fontFile.fileName}';
-                src: url('https://burmesefonts.vercel.app/api/fonts/${fontFile.fileName}.${fontFile.extension}') format('truetype'),
+                src: url('${process.env.REACT_APP_API_URL}/api/fonts/${fontFile.fileName}.${fontFile.extension}') format('truetype'),
             }
         `
     }).join('\n');
