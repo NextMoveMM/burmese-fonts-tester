@@ -7,13 +7,13 @@ const CDNLink = ({ link }) => {
     };
 
     return (
-        <div className="flex flex-row dark:bg-zinc-600">
+        <div className="flex flex-row dark:bg-zinc-600 rounded-lg overflow-hidden">
             <input 
-                className="flex-1 flex items-center bg-sky-100 rounded-l-lg text-xs h-10 pl-2 pr-1 focus:outline-none"
+                className="flex-1 flex items-center bg-sky-100 text-xs h-10 pl-2 pr-1 focus:outline-none"
                 defaultValue={link}
             />
             <button 
-                className="flex items-center justify-center w-12 text-gray-700 bg-sky-300 active:bg-sky-400 rounded-r-lg"
+                className="flex items-center justify-center w-12 text-gray-700 bg-sky-300 active:bg-sky-400"
                 onClick={copyToClipboard}
             >
                 <span className="text-xs">
@@ -30,11 +30,15 @@ const DeliveryModal = ({
     selectedFont 
 }) => {
 
-    const cssSelectedLink = `@import url(${process.env.REACT_APP_API_URL}/api/${selectedFont.fileName}.css);`;
-    const cssAllLink = `@import url(${process.env.REACT_APP_API_URL}/api/all.css);`;
-    const htmlSelectedLink = `<link rel="stylesheet" href="${process.env.REACT_APP_API_URL}/api/${selectedFont.fileName}.css"></link>`;
-    const htmlAllLink = `<link rel="stylesheet" href="${process.env.REACT_APP_API_URL}/api/all.css"></link>`;
-    const downloadLink = `${process.env.REACT_APP_API_URL}/api/fonts/${selectedFont.fileName}.${selectedFont.extension}`;
+    const apiUrl = process.env.NEXT_PUBLIC_APP_URL;
+
+    console.log(apiUrl);
+
+    const cssSelectedLink = `@import url(${process.env.NEXT_PUBLIC_APP_URL}/api/${selectedFont.fileName}.css);`;
+    const cssAllLink = `@import url(${process.env.NEXT_PUBLIC_APP_URL}/api/all.css);`;
+    const htmlSelectedLink = `<link rel="stylesheet" href="${process.env.NEXT_PUBLIC_APP_URL}/api/${selectedFont.fileName}.css"></link>`;
+    const htmlAllLink = `<link rel="stylesheet" href="${process.env.NEXT_PUBLIC_APP_URL}/api/all.css"></link>`;
+    const downloadLink = `${process.env.NEXT_PUBLIC_APP_URL}/api/fonts/${selectedFont.fileName}.${selectedFont.extension}`;
 
     return (
         <div 

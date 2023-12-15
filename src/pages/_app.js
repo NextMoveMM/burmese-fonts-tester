@@ -5,10 +5,11 @@ export default function App({ Component, pageProps }) {
     return (
         <>
             <Head> 
-                <title>Burmese Font Tester</title>
-                <meta name="description" content="Burmese Font Tester Website" />
+                <title>Burmese Fonts Tester</title>
+                <meta name="description" content="Burmese Fonts Tester Website" />
                 <meta name="keywords" content="Myanmar Fonts, Burmese Fonts, Myanmar Unicode, Myanmar Typography, Unicode Fonts, Font Preview, Burmese Font Gallery, Padauk, Burmese Typography" />
                 <meta name="author" content="Lin Htin Nyein" />
+                <meta name="theme-color" content="#ffffff"/>
 
                 <meta property="og:title" content="Burmese Font Tester" />
                 <meta property="og:description" content="Test Unicode and Non-Unicode Fonts" />

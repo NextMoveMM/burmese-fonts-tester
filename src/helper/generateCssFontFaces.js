@@ -4,7 +4,7 @@ export default (fontFiles) => {
         return `
             @font-face {
                 font-family: '${fontFile.fileName}';
-                src: url('${process.env.REACT_APP_API_URL}/api/fonts/${fontFile.fileName}.${fontFile.extension}') format('truetype'),
+                src: url('${process.env.NEXT_PUBLIC_APP_URL}/api/fonts/${fontFile.fileName}.${fontFile.extension}') format('truetype'),
             }
         `
     }).join('\n');
