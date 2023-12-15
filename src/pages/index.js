@@ -220,18 +220,19 @@ const Home = ({fonts}) => {
 							</div>
 						</div>
 
-						<div className="flex-1">
-							<div className="flex flex-col h-full">
-								{/* Warning */}
-								{ selectedFont.unicode && (
-									<div className="flex items-center justify-center h-8">
-										<span className="text-xs text-yellow-500">
-											Warning! Rewrite with English Keyboard to see changes for non-unicode fonts
-										</span>
-									</div>
-								)}
+						{/* Warning */}
+						{ !selectedFont.unicode && (
+							<div className="flex items-center justify-center my-2 mx-5">
+								<span className="text-xs text-yellow-500">
+									Warning! Rewrite with English Keyboard to see changes for non-unicode fonts.
+								</span>
+							</div>
+						)}
+
+						<div className="flex-1 overflow-auto">
+							<div className="flex flex-col min-h-screen">
 								<textarea
-									className="flex-1 focus:outline-none placeholder:font-sans text-black w-full h-full resize-none p-8 dark:bg-zinc-700 dark:text-white"
+									className="flex-1 focus:outline-none placeholder:font-sans text-black w-full h-full resize-none px-8 py-5 dark:bg-zinc-700 dark:text-white"
 									style={{
 										fontFamily: selectedFont.fileName,
 										fontSize: fontSize,
@@ -249,10 +250,13 @@ const Home = ({fonts}) => {
 				</div>
 
 				{/* footer */}
-				<div className="flex items-center justify-end border-t border-t-gray-200 dark:border-t-zinc-800 h-8">
+				<div className="flex flex-row items-center justify-between px-4 border-t border-t-gray-200 dark:border-t-zinc-800 h-8 mb-4 sm:mb-0">
+					<span className="text-gray-400 font-bold text-2xs">
+						v1.0.0
+					</span>
 					<a 
 						href="https://thenextmove.net"
-						className="flex flex-row items-center space-x-2 mr-4"
+						className="flex flex-row items-center space-x-2"
 					>
 						<span className="text-2xs italic text-gray-400">Brought To You By</span>
 						<NextMoveLogo theme={ isDarkMode ? 'light' : 'dark' }/>

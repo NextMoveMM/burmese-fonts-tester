@@ -6,6 +6,7 @@ export default function App({ Component, pageProps }) {
         <>
             <Head> 
                 <title>Burmese Fonts Tester</title>
+                <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=0" />
                 <meta name="description" content="Burmese Fonts Tester Website" />
                 <meta name="keywords" content="Myanmar Fonts, Burmese Fonts, Myanmar Unicode, Myanmar Typography, Unicode Fonts, Font Preview, Burmese Font Gallery, Padauk, Burmese Typography" />
                 <meta name="author" content="Lin Htin Nyein" />
