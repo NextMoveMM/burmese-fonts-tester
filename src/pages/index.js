@@ -232,7 +232,7 @@ const Home = ({fonts}) => {
 						<div className="flex-1 overflow-auto">
 							<div className="flex flex-col min-h-screen">
 								<textarea
-									className="flex-1 focus:outline-none placeholder:font-sans text-black w-full h-full resize-none px-8 py-5 dark:bg-zinc-700 dark:text-white"
+									className="flex-1 no-underline focus:outline-none placeholder:font-sans text-black w-full h-full resize-none px-8 py-5 dark:bg-zinc-700 dark:text-white"
 									style={{
 										fontFamily: selectedFont.fileName,
 										fontSize: fontSize,
